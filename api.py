@@ -5,14 +5,14 @@ import pandas as pd
 from fastapi import FastAPI
 from datetime import datetime
 
-linear_regression = joblib.load("models/linear_regression.pkl")
-decision_tree = joblib.load("models/decision-tree.pkl")
-random_forest = joblib.load("models/random-forest.pkl")
+linear_regression = joblib.load("linear_regression.pkl")
+decision_tree = joblib.load("decision-tree.pkl")
+random_forest = joblib.load("random-forest.pkl")
 
 
 app = FastAPI()
 
-with open("encoders/uf.pickle", 'rb') as file:
+with open("uf.pickle", 'rb') as file:
     uf_encoder = pickle.load(file)
 
 
